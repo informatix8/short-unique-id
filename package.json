@@ -4,9 +4,9 @@
   "title": "Short Unique ID",
   "description": "Generates short and unique IDs",
   "license": "ISC",
-  "main": "dist/short-unique-id.cjs.js",
-  "module": "dist/short-unique-id.esm.js",
-  "browser": "dist/short-unique-id.all.umd.js",
+  "main": "dist/unique-short-id.cjs.js",
+  "module": "dist/unique-short-id.esm.js",
+  "browser": "dist/unique-short-id.all.umd.js",
   "author": "Mjr",
   "contributors": [
     "Mjr <mjr@informatix.io>"
