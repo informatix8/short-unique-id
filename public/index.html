@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>ShortUniqueId Text</title>
+</head>
+<body>
+    <pre id="output"></pre>
+    <script src="unique-short-id.js"></script>
+    <script>
+        const options = new UniqueShortId.Options();
+        options.dictionary = [];
+        for (let c = 'a'.charCodeAt(0); c <= 'z'.charCodeAt(0); c++) {
+            options.dictionary.push(String.fromCharCode(c));
+        }
+        for (let c = '0'.charCodeAt(0); c <= '9'.charCodeAt(0); c++) {
+            options.dictionary.push(String.fromCharCode(c));
+        }
+
+        const generator = new UniqueShortId.ShortUniqueId(options);
+        const textElement = document.getElementById('output');
+        textElement.innerText += ('hash(aaa) = ' + generator.hash('aaa')) + '\n';
+        textElement.innerText += ('hash(bbb) = ' + generator.hash('bbb')) + '\n';
+        textElement.innerText += ('hash(ccc) = ' + generator.hash('ccc')) + '\n';
+        textElement.innerText += ('hash(aaa) = ' + generator.hash('aaa')) + '\n';
+        textElement.innerText += ('hash(aaa, 22) = ' + generator.hash('aaa', 22)) + '\n';
+    </script>
+</body>
+</html>
