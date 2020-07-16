@@ -152,16 +152,16 @@ export class ShortUniqueId {
       throw new Error('Invalid UUID Length Provided');
     }
 
-    console.log('val ' + val);
+    //console.log('val ' + val);
     // Generate random ID parts from Dictionary.
     for (let j = 0; j < uuidLength; j += 1) {
       let randVal = Math.abs(generator.int32() % 100000) / 100000;
-      console.log('j ' + randVal);
+      //console.log('j ' + randVal);
       // randVal = randVal - Math.floor(randVal);
 
-      console.log('fffff ' + Math.floor(randVal * this.dictLength), this.dictLength);
+      //console.log('fffff ' + Math.floor(randVal * this.dictLength), this.dictLength);
       randomPartIdx = Math.floor(randVal * this.dictLength) % this.dictLength;
-      console.log('randomPartIdx ' + randomPartIdx);
+      //console.log('randomPartIdx ' + randomPartIdx);
       id += this.dict[randomPartIdx];
     }
 
