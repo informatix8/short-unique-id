@@ -1,6 +1,6 @@
 {
   "name": "@informatix8/short-unique-id",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Short Unique ID",
   "description": "Generates short and unique IDs",
   "license": "ISC",
